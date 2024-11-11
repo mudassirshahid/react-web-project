@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const Header = () => {
+const SideHeader = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -9,131 +9,159 @@ const Header = () => {
   return (
     <>
       <div className="bg-gradient-to-b from-[#101212] relative to-[#08201D]">
-  <header className="absolute inset-x-0 top-0 z-10 w-full">
-    <div className="px-4 mx-auto sm:px-6 lg:px-8">
-      <div className="flex items-center justify-between h-16 lg:h-20">
-        <div className="flex-shrink-0">
-          <a href="#" title="" className="flex">
-            <img
-              className="w-auto h-8"
-              src="https://cdn.rareblocks.xyz/collection/celebration/images/hero/5/logo.svg"
-              alt=""
-            />
-          </a>
-        </div>
-        <div className="hidden lg:flex lg:items-center lg:justify-center lg:space-x-10">
-          <a
-            href="#"
-            title=""
-            className="text-base text-white transition-all duration-200 hover:text-opacity-80"
+      <header className="absolute inset-x-0 top-0 z-10 w-full">
+        <div className="px-4 mx-auto sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 lg:h-20">
+            <div className="flex-shrink-0">
+              <a href="#" title="" className="flex">
+                <img
+                  className="w-auto h-8"
+                  src="https://cdn.rareblocks.xyz/collection/celebration/images/hero/5/logo.svg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div className="hidden lg:flex lg:items-center lg:justify-center lg:space-x-10">
+              <a
+                href="#"
+                className="text-base text-white transition-all duration-200 hover:text-opacity-80"
+              >
+                Features
+              </a>
+              <a
+                href="#"
+                className="text-base text-white transition-all duration-200 hover:text-opacity-80"
+              >
+                Solutions
+              </a>
+              <a
+                href="#"
+                className="text-base text-white transition-all duration-200 hover:text-opacity-80"
+              >
+                Resources
+              </a>
+              <a
+                href="#"
+                className="text-base text-white transition-all duration-200 hover:text-opacity-80"
+              >
+                Pricing
+              </a>
+            </div>
+            <div className="lg:flex lg:items-center lg:justify-end lg:space-x-6 sm:ml-auto">
+              <a
+                href="#"
+                className="hidden text-base text-white transition-all duration-200 lg:inline-flex hover:text-opacity-80"
+              >
+                Log in
+              </a>
+              <a
+                href="#"
+                className="inline-flex items-center justify-center px-3 sm:px-5 py-2.5 text-sm sm:text-base font-semibold transition-all duration-200 text-white bg-white/20 hover:bg-white/40 focus:bg-white/40 rounded-lg"
+                role="button"
+              >
+                Apply for free
+              </a>
+            </div>
+            <button
+              type="button"
+              onClick={toggleMenu}
+              className="inline-flex p-2 ml-1 text-white transition-all duration-200 rounded-md sm:ml-4 lg:hidden focus:bg-gray-800 hover:bg-gray-800"
+            >
+              <svg
+                className={`${isMenuOpen ? 'hidden' : 'block'} w-6 h-6`}
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+              <svg
+                className={`${isMenuOpen ? 'block' : 'hidden'} w-6 h-6`}
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          {/* Right Sidebar Menu */}
+          <div
+            className={`fixed top-0 right-0 h-full w-64 z-50 bg-gray-800 text-white transform transition-transform duration-300 ${
+              isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+            } lg:hidden`}
           >
-            {" "}
-            Features{" "}
-          </a>
-          <a
-            href="#"
-            title=""
-            className="text-base text-white transition-all duration-200 hover:text-opacity-80"
-          >
-            {" "}
-            Solutions{" "}
-          </a>
-          <a
-            href="#"
-            title=""
-            className="text-base text-white transition-all duration-200 hover:text-opacity-80"
-          >
-            {" "}
-            Resources{" "}
-          </a>
-          <a
-            href="#"
-            title=""
-            className="text-base text-white transition-all duration-200 hover:text-opacity-80"
-          >
-            {" "}
-            Pricing{" "}
-          </a>
-        </div>
-        <div className="lg:flex lg:items-center lg:justify-end lg:space-x-6 sm:ml-auto">
-          <a
-            href="#"
-            title=""
-            className="hidden text-base text-white transition-all duration-200 lg:inline-flex hover:text-opacity-80"
-          >
-            {" "}
-            Log in{" "}
-          </a>
-          <a
-            href="#"
-            title=""
-            className="hidden sm:block items-center justify-center px-3 sm:px-5 py-2.5 text-sm sm:text-base font-semibold transition-all duration-200 text-white bg-white/20 hover:bg-white/40 focus:bg-white/40 rounded-lg"
-            role="button"
-          >
-            {" "}
-            Apply for free{" "}
-          </a>
-        </div>
-        {/* Top side menu  */}
-        <button
-          type="button"
-          className="inline-flex p-2 ml-1 text-white transition-all duration-200 rounded-md sm:ml-4 lg:hidden focus:bg-gray-800 hover:bg-gray-800"
-          onClick={toggleMenu}
-        >
-          {/* Menu open: "hidden", Menu closed: "block" */}
-          <svg
-            className={`${isMenuOpen ? 'hidden' : 'block'} w-6 h-6`}
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
-          {/* Menu open: "block", Menu closed: "hidden" */}
-          <svg
-            className={`${isMenuOpen ? 'block' : 'hidden'} w-6 h-6`}
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </header>
-   {/* Mobile Navigation Links */}
-   <div
-          className={`lg:hidden transition-all duration-300 ease-in-out ${
-            isMenuOpen ? 'max-h-screen' : 'max-h-0'
-          } overflow-hidden`}
-        >
-          <div className="flex flex-col items-center bg-gray-900 text-white space-y-4 pt-16 pb-8">
-            <a href="#" className="text-base hover:text-opacity-80">Features</a>
-            <a href="#" className="text-base hover:text-opacity-80">Solutions</a>
-            <a href="#" className="text-base hover:text-opacity-80">Resources</a>
-            <a href="#" className="text-base hover:text-opacity-80">Pricing</a>
-            <a href="#" className="text-base hover:text-opacity-80">Log in</a>
-            <a href="#" className="px-3 py-2 text-sm font-semibold text-white bg-white/20 rounded-lg hover:bg-white/40">
-              Apply for free
-            </a>
+            <button
+              type="button"
+              onClick={toggleMenu}
+              className="p-2 m-4 text-white rounded-md focus:outline-none focus:bg-gray-700 hover:bg-gray-700"
+            >
+              <svg
+                className="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+            <nav className="flex flex-col items-start p-4 space-y-4">
+              <a
+                href="#"
+                className="text-base text-white transition-all duration-200 hover:text-opacity-80"
+              >
+                Features
+              </a>
+              <a
+                href="#"
+                className="text-base text-white transition-all duration-200 hover:text-opacity-80"
+              >
+                Solutions
+              </a>
+              <a
+                href="#"
+                className="text-base text-white transition-all duration-200 hover:text-opacity-80"
+              >
+                Resources
+              </a>
+              <a
+                href="#"
+                className="text-base text-white transition-all duration-200 hover:text-opacity-80"
+              >
+                Pricing
+              </a>
+              <a
+                href="#"
+                className="text-base text-white transition-all duration-200 hover:text-opacity-80"
+              >
+                Log in
+              </a>
+            </nav>
           </div>
         </div>
+      </header>
+   
 
-  <section className="relative lg:min-h-[1000px] pt-24 pb-10 sm:pt-32 sm:pb-16 lg:pb-24">
-    <div className="absolute inset-x-0 bottom-0 z-10 lg:flex opacity-5 lg:opacity-100">
+  <section className="z-0 relative lg:min-h-[1000px] pt-24 pb-10 sm:pt-32 sm:pb-16 lg:pb-24">
+    <div className="absolute inset-x-0 bottom-0 z-10 opacity-5 lg:opacity-100 lg:flex">
       <img
         className="hidden w-full lg:block"
         src="https://cdn.rareblocks.xyz/collection/celebration/images/hero/5/credit-cards.png"
@@ -305,4 +333,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default SideHeader
