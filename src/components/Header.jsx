@@ -133,14 +133,14 @@ const Header = () => {
         </div>
 
   <section className="relative lg:min-h-[1000px] pt-24 pb-10 sm:pt-32 sm:pb-16 lg:pb-24">
-    <div className="absolute inset-x-0 bottom-0 z-10 lg:flex opacity-5 lg:opacity-100">
+    <div className="absolute inset-x-0 lg:bottom-0 z-10 lg:flex opacity-5 lg:opacity-100">
       <img
         className="hidden w-full lg:block"
         src="https://cdn.rareblocks.xyz/collection/celebration/images/hero/5/credit-cards.png"
         alt=""
       />
       <img
-        className="block w-full lg:hidden"
+        className="block w-full lg:hidden h-96"
         src="https://cdn.rareblocks.xyz/collection/celebration/images/hero/5/credit-cards-mobile.png"
         alt=""
       />
