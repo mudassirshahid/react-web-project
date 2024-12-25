@@ -5,6 +5,7 @@ import CardSection from "./components/CardSection";
 import TailComponents from "./components/TailComponents";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import SidebarHeader from "./components/SidebarHeader";
 
 function App() {
   const [color, setColor] = useState("#242424");
@@ -29,6 +30,7 @@ function App() {
     <>
       <div className="w-full h-auto duration-200" style={{ background: color }}>
         <Header />
+        {/* <SidebarHeader />  */}
         <button className="my-3" onClick={updateColor}>
           Set mode
         </button>

@@ -56,7 +56,7 @@ const SideHeader = () => {
               </a>
               <a
                 href="#"
-                className="inline-flex items-center justify-center px-3 sm:px-5 py-2.5 text-sm sm:text-base font-semibold transition-all duration-200 text-white bg-white/20 hover:bg-white/40 focus:bg-white/40 rounded-lg"
+                className="sm:block hidden items-center justify-center px-3 sm:px-5 py-2.5 text-sm sm:text-base font-semibold transition-all duration-200 text-white bg-white/20 hover:bg-white/40 focus:bg-white/40 rounded-lg"
                 role="button"
               >
                 Apply for free
@@ -103,6 +103,7 @@ const SideHeader = () => {
               isMenuOpen ? 'translate-x-0' : 'translate-x-full'
             } lg:hidden`}
           >
+            <div className='flex justify-end'>
             <button
               type="button"
               onClick={toggleMenu}
@@ -123,6 +124,8 @@ const SideHeader = () => {
                 />
               </svg>
             </button>
+            </div>
+            
             <nav className="flex flex-col items-start p-4 space-y-4">
               <a
                 href="#"
@@ -154,6 +157,9 @@ const SideHeader = () => {
               >
                 Log in
               </a>
+              <a href="#" className="px-3 py-2 text-sm font-semibold text-white bg-white/20 rounded-lg hover:bg-white/40">
+              Apply for free
+            </a>
             </nav>
           </div>
         </div>
