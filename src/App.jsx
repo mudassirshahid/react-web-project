@@ -31,8 +31,8 @@ function App() {
       <div className="w-full h-auto duration-200" style={{ background: color }}>
         <Header />
         {/* <SidebarHeader />  */}
-        <button className="my-3" onClick={updateColor}>
-          Set mode
+        <button className="my-4 hover:-rotate-2" onClick={updateColor}>
+          Click!
         </button>
         <TailComponents />
         <CardSection />
