@@ -65,7 +65,7 @@ const SideHeader = () => {
             <button
               type="button"
               onClick={toggleMenu}
-              className="inline-flex p-2 ml-1 text-white transition-all duration-200 rounded-md sm:ml-4 lg:hidden focus:bg-gray-800 hover:bg-gray-800"
+              className="inline-flex p-2 ml-1 text-white transition-all duration-200 rounded-md sm:ml-4 lg:hidden focus:bg-gray-800 hover:bg-gray-800 z-auto"
             >
               <svg
                 className={`${isMenuOpen ? 'hidden' : 'block'} w-6 h-6`}
@@ -103,7 +103,7 @@ const SideHeader = () => {
               isMenuOpen ? 'translate-x-0' : 'translate-x-full'
             } lg:hidden`}
           >
-            <div className='flex justify-end'>
+            {/* <div className='flex justify-start'>
             <button
               type="button"
               onClick={toggleMenu}
@@ -124,7 +124,7 @@ const SideHeader = () => {
                 />
               </svg>
             </button>
-            </div>
+            </div> */}
             
             <nav className="flex flex-col items-start p-4 space-y-4">
               <a
